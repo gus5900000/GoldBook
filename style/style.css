@@ -1,0 +1,50 @@
+@font-face {
+    font-family: SfProBold;
+    src: url(../style/font/SFPRODISPLAYBOLD.OTF);
+}
+
+@font-face {
+    font-family: SfProBlackItalic;
+    src: url(../style/font/SFPRODISPLAYBLACKITALIC.OTF);
+}
+
+@font-face {
+    font-family: SfProHeavyItalic;
+    src: url(../style/font/SFPRODISPLAYHEAVYITALIC.OTF);
+}
+
+@font-face {
+    font-family: SfProLightItalic;
+    src: url(../style/font/SFPRODISPLAYLIGHTITALIC.OTF);
+}
+
+@font-face {
+    font-family: SfProMedium;
+    src: url(../style/font/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+    font-family: SfProRegular;
+    src: url(../style/font/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+    font-family: SfProSemiBold;
+    src: url(../style/font/SFPRODISPLAYSEMIBOLDITALIC.OTF);
+}
+
+@font-face {
+    font-family: SfProItalic;
+    src: url(../style/font/SFPRODISPLAYTHINITALIC.OTF);
+}
+
+@font-face {
+    font-family: SfProUltraLightItalic;
+    src: url(../style/font/SFPRODISPLAYULTRALIGHTITALIC.OTF);
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
