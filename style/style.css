@@ -88,16 +88,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 18vh;
-    border: #fff solid 3px;
-    border-radius: 5px; 
+    width: 5w;
+    height: 8vh;
     padding: 5px;
     font-size: 15px;
     margin: 10px;
     flex-grow: 1;
-    font-family: SfProRegular, sans-serif;
+}
 
+.header-login .button-login {
+	background-color:#111B47;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:SfProRegular ;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.button-login:hover {
+	background-color:#1f3181;
+}
+.button-login:active {
+	position:relative;
+	top:1px;
 }
 
 .header-login input {
@@ -110,7 +129,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 25vh;
+    height: 30vh;
     background-image: url(../assets/header-bottom.jpg); 
     background-repeat: repeat-x;
 }
@@ -129,5 +148,92 @@
 
 .header-bottom-texte p {
     font-family: SfProRegular, sans-serif;
-    color: gray;
+    color: rgb(66, 66, 66);
+}
+
+.header-bottom-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5w;
+    height: 8vh;
+    padding: 5px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.button-form {
+    background-color:#1C1C1C;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:SfProRegular;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+    padding: 20px;
+}
+
+.button-form:hover {
+	background-color:#3a3a3a;
+}
+.button-form:active {
+	position:relative;
+	top:1px;
+}
+
+footer {
+	font-family:SfProRegular;
+}
+
+
+.form-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 40vw;
+  height: 10vh;
+  box-sizing: border-box;
+  border: 1px solid #999;
+
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+.form-button {
+  padding-left: 90px;
+  margin-left: 0.5em;
+}
+
+
+.form-book .button {
+    border: none;
+    background-color: none;
 }
