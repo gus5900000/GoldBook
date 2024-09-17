@@ -33,5 +33,46 @@
                 return false;
             }
         }
+
+        public function checkUser(string $username, string $hashpass) {
+            $sqlQuery = "SELECT * FROM `user` WHERE pseudo = :pseudo AND hashpassword = :hashpass";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $statement->execute([
+                ":pseudo" => $username,
+                ":hashpass" => $hashpass
+            ]);
+            $result = $statement->fetch();
+            if($result) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        public function checkEmail(string $email) {
+            $sqlQuery = "SELECT COUNT(*) FROM `user` WHERE email = :email";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $statement->execute([":email" => $email]);
+            return $statement->fetchColumn() > 0;
+        }
+
+        public function addUser(int $id, string $pseudo, string $email , string $hashpass) {
+            if ($this->checkEmail($email)) {
+                return "Email déjà enregistré";
+            }
+            $sqlQuery = "INSERT INTO `user` (user_id, pseudo, email, hashpassword) VALUES (:id,:pseudo, :email, :hashpass)";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $result = $statement->execute([
+                ":id" => $id,
+                ":pseudo" => $pseudo,
+                ":email" => $email,
+                ":hashpass" => $hashpass
+            ]);
+            if ($result) {
+                return true; 
+            } else {
+                return false;
+            }
+        }
+
     }
 ?>

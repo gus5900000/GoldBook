@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php
+session_start()
+?>
 <head>
     <?php
     include_once("../_partiels/_head.php")

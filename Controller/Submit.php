@@ -1,9 +1,9 @@
 <?php
     session_start();
     include_once("../Model/Model.php");
-    $pseudo = $_POST["username"];
-    $email = $_POST["user_mail"];
-    $message= $_POST["message"];
+    $pseudo = htmlspecialchars($_POST["username"]);
+    $email = htmlspecialchars($_POST["user_mail"]);
+    $message= htmlspecialchars($_POST["message"]);
     $id = mt_rand(1, 100000000);
 
     $bdd = new Model();
