@@ -26,11 +26,11 @@
     </header>
 
     <main>
-        <form action="#" method="POST" class="form-book">
+        <form action="../Controller/Submit.php" method="POST" class="form-book">
             <ul>
                 <li>
                     <label for="name">Nom</label>
-                    <input type="text" id="name" name="usernmae" placeholder="Votre nom" />
+                    <input type="text" id="name" name="username" placeholder="Votre nom" />
                 </li>
                 <li>
                     <label for="mail">E-mail</label>
