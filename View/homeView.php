@@ -27,54 +27,22 @@
     
     <main>
         <div class="book-grid">
-            <div class="book">
-                <div class="container">
-                    <div class="text-pseudo">Gus</div>
-                    <div class="text-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.
-                    Hic dolores tempora ad fugit maiores incidunt soluta qui omnis.
-                    Fuga non eaque quaerat, accusamus nobis temporibus facere quo sed!
+        <?php
+            foreach($commentList as $comment) {
+            ?>
+                <div class="book">
+                    <div class="container">
+                        <div class="text-pseudo"><?=  $comment["pseudo"] ?></div>
+                        <div class="text-desc">
+                        <?= $comment["message"]?>
+                        </div>
+                        <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
                     </div>
-                    <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
                 </div>
-            </div>
-            <div class="book">
-                <div class="container">
-                    <div class="text-pseudo">Augustin</div>
-                    <div class="text-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.
-                    Hic dolores tempora ad fugit maiores incidunt soluta qui omnis.
-                    Fuga non eaque quaerat, accusamus nobis temporibus facere quo sed!
-                    </div>
-                    <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
-                </div>
-            </div>
-            <div class="book">
-                <div class="container">
-                <div class="text-pseudo">OUI</div>
-
-                    <div class="text-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.
-                    Hic dolores tempora ad fugit maiores incidunt soluta qui omnis.
-                    Fuga non eaque quaerat, accusamus nobis temporibus facere quo sed!
-                    </div>
-                    <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
-                </div>
-            </div>
-            <div class="book">
-                <div class="container">
-                <div class="text-pseudo">fezqfgrgdrhgdeqfrsgrg</div>
-
-                    <div class="text-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laudantium.
-                    Hic dolores tempora ad fugit maiores incidunt soluta qui omnis.
-                    Fuga non eaque quaerat, accusamus nobis temporibus facere quo sed!
-                    </div>
-                    <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
-                </div>
-            </div>
+            <?php
+            }
+        ?>
         </div>
-        
     </main>
 
 

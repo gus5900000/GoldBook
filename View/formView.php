@@ -19,7 +19,7 @@
                     <p>Ecris un message pour qu’il soit visible par tous</p>
                 </div>
                 <div class="header-bottom-button">
-                    <a href="../View/homeView.php" class="button-form">Home</a>
+                    <a href="../Controller/home.php" class="button-form">Home</a>
                 </div>
             </div>
         </div>
