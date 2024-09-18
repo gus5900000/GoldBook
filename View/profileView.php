@@ -24,15 +24,8 @@
     </header>
     <main>
         <div class="profile-menu">
-            <h1>Pseudo</h1>
-            <h2>Rôle</h2>
-            <p>Paramètre</p>
-            <a href="../Controller/Logout.php" class="button-logout">Déconnexion</a>
-        </div>
-        <div class="profile-content">
-            <h1>Pseudo</h1>
-            <h2>Rôle</h2>
-            <p>Paramètre</p>
+            <h1>Pseudo: <?= $_SESSION['username'] ?></h1>
+            <h2>Rôle: <?= $_SESSION["role"] ?></h2>
             <a href="../Controller/Logout.php" class="button-logout">Déconnexion</a>
         </div>
     </main>

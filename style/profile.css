@@ -1,23 +1,33 @@
-	
-.profile-menu {
-    width: 15vw;
-    height: 100%;
-    background-color: #222831;
-    border-radius: 0 0 15px 0px;
-    position: fixed;
-    z-index: 5;
-    top: 28vh;
-}
 
-.profile-content {
-	display: flex;
+
+main {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 45vw;
+    height: 50vh;
+    background-color: #222831;
+    border-radius: 25px;
+    box-shadow: 5px 5px 35px -1px rgba(0,0,0,0.69);
+    position: fixed;
+    z-index: 5;
+    top: 45vh;
+    margin-top: 10px;
+}
 
 
+.profile-menu > h1, h2, p {
+    padding: 15px;
+    color: white;
+}
 
 
 .button-logout {

@@ -74,5 +74,30 @@
             }
         }
 
+        public function getEmailUser(string $username, string $hashpass) {
+            $sqlQuery = "SELECT email FROM `user` WHERE pseudo = :pseudo AND hashpassword = :hashpass";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $statement->execute([
+                ":pseudo" => $username,
+                ":hashpass" => $hashpass
+            ]);
+            $req = $statement->fetch(PDO::FETCH_ASSOC);
+            return $req['email'];
+        }
+
+        public function getRoleUser(string $email) {
+            $sqlQuery = "SELECT role FROM `user` WHERE email = :email";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $statement->execute([":email" => $email]);
+            $req = $statement->fetch(PDO::FETCH_ASSOC);
+            return $req['role'];
+        }
+
+        public function deleteMessage(int $message_id) {
+            $sqlQuery = "DELETE FROM `message` WHERE id_message = :message_id";
+            $statement = $this->bdd->prepare($sqlQuery);
+            $statement->execute([":message_id" => $message_id]);
+            return ; 
+        }
     }
 ?>

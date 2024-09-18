@@ -305,6 +305,25 @@ textarea {
 
 }
 
+
+.btn-admin {
+    position: relative;
+    z-index: 10;
+    bottom: 10vh;;
+    left: 36.5vw;
+    background-color: rgb(101, 24, 24);
+	border-radius:10px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:SfProRegular;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+    width: 5vw;
+    height: 8vh;
+    padding: 20px;
+}
+
 .svg-image {
     position: absolute;
     top: 0;

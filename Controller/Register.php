@@ -10,10 +10,12 @@
     $bdd = new Model();
 
     $result = $bdd->addUser($id, $username, $email, $password);
+    $role = $bdd->getRoleUser($email);
 
     if($result) {
         $_SESSION["username"] = $username;
-        header("location: ../Controller/home.php?message=succes");
+        $_SESSION["role"] = $role;
+        header("location: ../Controller/home.php?message=$role");
     } else {
         header("location: ../View/registerView.php?message=$result");
     }

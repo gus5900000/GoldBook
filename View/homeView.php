@@ -37,6 +37,15 @@
                         <?= $comment["message"]?>
                         </div>
                         <img src="../assets/paper.svg" alt="Image SVG" class="svg-image">
+
+                        <?php if($_SESSION['role'] == 'admin') {
+                            ?>
+                        <form action="../Controller/Admin.php" method="POST">
+                            <input type="hidden" name="id" value="<?= $comment["id_message"] ?>">
+                            <input type="submit" class="btn-admin" value="Supprimé"></input>
+                        </form>
+                        <?php } ?>
+                        
                     </div>
                 </div>
             <?php

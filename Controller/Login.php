@@ -7,10 +7,13 @@
     $bdd = new Model();
 
     $result = $bdd->checkUser($username, $password);
-    
+    $email = $bdd->getEmailUser($username, $password);
+    $role = $bdd->getRoleUser($email);
+
     if($result) {
+        $_SESSION["role"] = $role;
         $_SESSION["username"] = $username;
-        header("location: ../Controller/home.php?message=succes");
+        header("location: ../Controller/home.php");
     } else {
         header("location: ../View/loginView.php?message=deny");
     }
