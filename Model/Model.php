@@ -57,7 +57,7 @@
 
         public function addUser(int $id, string $pseudo, string $email , string $hashpass) {
             if ($this->checkEmail($email)) {
-                return "Email déjà enregistré";
+                return false; 
             }
             $sqlQuery = "INSERT INTO `user` (user_id, pseudo, email, hashpassword) VALUES (:id,:pseudo, :email, :hashpass)";
             $statement = $this->bdd->prepare($sqlQuery);
